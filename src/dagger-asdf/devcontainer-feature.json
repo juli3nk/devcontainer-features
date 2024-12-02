@@ -1,0 +1,20 @@
+{
+    "id": "dagger-asdf",
+    "version": "1.0.0",
+    "name": "Dagger (via asdf)",
+    "documentationURL": "http://github.com/juli3nk/devcontainer-features/tree/main/src/dagger-asdf",
+    "description": "An engine to run your pipelines in containers.",
+    "options": {
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-extra/features/asdf-package"
+    ]
+}
