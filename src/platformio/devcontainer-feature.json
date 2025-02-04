@@ -1,0 +1,39 @@
+{
+    "id": "platformio",
+    "version": "1.0.0",
+    "name": "PlatformIO",
+    "documentationURL": "http://github.com/juli3nk/devcontainer-features/tree/main/src/platformio",
+    "description": "PlatformIO is a cross-platform, cross-architecture, multiple framework, professional tool for embedded systems engineers and for software developers who write applications for embedded products.",
+    "options": {
+        "udevRules": {
+            "type": "boolean",
+            "description": "Whether to add udev rules.",
+            "default": false
+        }
+    },
+    "mounts": [
+      {
+        "type": "bind",
+        "source": "/dev",
+        "target": "/dev"
+      }
+    ],
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "platformio-ide": {
+            "pioHomeServerHttpHost": "0.0.0.0",
+            "pioHomeServerHttpPort": 8008,
+            "disablePIOHomeStartup": true
+          }
+        },
+        "extensions": [
+          "ms-vscode.cpptools",
+          "platformio.platformio-ide"
+        ]
+      }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/python"
+    ]
+}
